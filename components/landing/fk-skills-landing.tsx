@@ -8,7 +8,6 @@ import {
   BadgeCheck,
   Check,
   Clipboard,
-  GitBranch,
   Radar,
   ScanSearch,
   ShieldCheck,
@@ -191,13 +190,6 @@ const footerColumns = [
       ["Cài đặt", "#install"],
     ],
   },
-  {
-    title: "Nguồn",
-    links: [
-      ["GitHub", "https://github.com/ThinhTP204/fk-skills"],
-      ["Install command", "#install"],
-    ],
-  },
 ] as const;
 
 const primaryNav = [
@@ -311,7 +303,7 @@ function SiteFooter() {
       </div>
 
       <div className="relative px-4 py-14 md:px-6 lg:px-10 lg:py-16">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(3,minmax(0,0.55fr))] lg:gap-10 xl:gap-14">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[minmax(0,1.4fr)_repeat(2,minmax(0,0.55fr))] lg:gap-10 xl:gap-14">
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="inline-flex items-center gap-2.5 font-black tracking-[-0.02em]" aria-label="fk-skills home">
               <span className="grid size-9 place-items-center rounded-md bg-[#faf9f5] text-xs text-[#141413]">fk</span>
@@ -358,15 +350,6 @@ function SiteFooter() {
             >
               Cài đặt ngay
               <ArrowRight className="size-4" aria-hidden="true" />
-            </a>
-            <a
-              href="https://github.com/ThinhTP204/fk-skills"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#87867f] transition hover:text-[#faf9f5] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/20"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GitBranch className="size-4" aria-hidden="true" />
-              GitHub
             </a>
             <a
               href="#top"
@@ -523,7 +506,7 @@ function HeroWorkspace() {
           </div>
         </div>
 
-        <div className="hero-panel absolute -bottom-1 right-0 z-20 w-[min(42%,228px)] translate-y-1 rounded-lg border border-[#d9d4c7] bg-[#faf9f5] p-3.5 text-[#141413] shadow-[0_16px_32px_-12px_rgba(20,20,19,0.18)] lg:-bottom-2 lg:translate-y-2">
+        <div className="hero-panel absolute bottom-3 right-2 z-20 w-[min(42%,228px)] rounded-lg border border-[#d9d4c7] bg-[#faf9f5] p-3.5 text-[#141413] shadow-[0_16px_32px_-12px_rgba(20,20,19,0.18)] lg:bottom-5 lg:right-2.5">
           <div className="mb-2.5 flex items-center justify-between gap-2">
             <p className="font-mono text-[10px] font-black text-[#c96442]">DETECTOR · SPACING</p>
             <span className="rounded bg-[#c96442]/12 px-2 py-0.5 font-mono text-[9px] font-black text-[#c96442]">FAIL</span>
@@ -553,7 +536,7 @@ function HeroWorkspace() {
           </button>
         </div>
 
-        <div className="float-chip hero-panel absolute right-0 top-0 z-30 w-[196px] rounded-lg border border-[#d9d4c7] bg-[#faf9f5] p-3.5 text-[#141413] shadow-[0_14px_32px_-10px_rgba(20,20,19,0.2)] lg:top-0.5">
+        <div className="float-chip hero-panel absolute right-1 top-0 z-30 w-[196px] rounded-lg border border-[#d9d4c7] bg-[#faf9f5] p-3.5 text-[#141413] shadow-[0_14px_32px_-10px_rgba(20,20,19,0.2)] lg:top-0.5 lg:right-2">
           <div className="flex gap-3">
             <div className="w-1.5 shrink-0 self-stretch rounded-full bg-[#788c5d]" />
             <div className="min-w-0">
