@@ -175,6 +175,7 @@ export const footerColumns = [
     links: [
       ["23 lệnh", "#commands"],
       ["Detector 44 rule", "#detector"],
+      ["UI Tool", "#ui-tool"],
       ["Cài đặt", "#install"],
     ],
   },
@@ -186,6 +187,7 @@ export const primaryNav = [
   ["Harness", "harness"],
   ["Commands", "commands"],
   ["Detector", "detector"],
+  ["UI Tool", "ui-tool"],
 ] as const;
 
 export type HeroWorkflowTone = (typeof heroWorkflowSteps)[number]["tone"];
