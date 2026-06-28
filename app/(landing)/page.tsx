@@ -1,5 +1,6 @@
 import { buildPageMetadata } from "@/lib/seo/metadata";
 import { ArchitectureSection } from "./components/architecture-section";
+import { CommandAtlasSection } from "./components/command-atlas-section";
 import { CommandsSection } from "./components/commands-section";
 import { CtaSection } from "./components/cta-section";
 import { DetectorSection } from "./components/detector-section";
@@ -11,6 +12,7 @@ import { LandingMotionRoot } from "./components/landing-motion-root";
 import { ProblemSection } from "./components/problem-section";
 import { SiteFooter } from "./components/site-footer";
 import { SiteHeader } from "./components/site-header";
+import { UiToolSection } from "./components/ui-tool-section";
 
 export const metadata = buildPageMetadata({
   title: "fk-skills",
@@ -29,7 +31,9 @@ export default function HomePage() {
       <ArchitectureSection />
       <HarnessSection />
       <CommandsSection />
+      <CommandAtlasSection />
       <DetectorSection />
+      <UiToolSection />
       <FeaturesSection />
       <CtaSection />
       <SiteFooter />
