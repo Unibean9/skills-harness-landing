@@ -1,5 +1,7 @@
 import { Check } from "lucide-react";
 import { engineeringCompare, harnessLocks, harnessRows } from "./content";
+import { HarnessPreviewPanel } from "./harness-preview-panel";
+import { PromptPreviewPanel } from "./prompt-preview-panel";
 
 export function HarnessSection() {
   return (
@@ -32,22 +34,36 @@ export function HarnessSection() {
         </div>
       </div>
 
-      <div className="mt-10 grid gap-px border border-white/24 bg-white/24 lg:grid-cols-2">
-        {engineeringCompare.map((item) => (
-          <article key={item.title} className={item.tone === "strong" ? "bg-[#141413] p-6" : "bg-[#faf9f5] p-6 text-[#141413]"}>
-            <p className={item.tone === "strong" ? "font-mono text-sm font-black text-[#d97757]" : "font-mono text-sm font-black text-[#c96442]"}>
-              {item.title}
-            </p>
+      <div className="mt-10 grid gap-px border border-white/24 bg-white/24 lg:grid-cols-2 lg:items-start">
+        <article className="flex flex-col bg-[#faf9f5] p-6 text-[#141413]">
+          <div className="flex-1">
+            <p className="font-mono text-sm font-black text-[#c96442]">Prompt engineering</p>
             <div className="mt-8 grid gap-4 md:grid-cols-2">
-              {item.points.map((point) => (
+              {engineeringCompare[0].points.map((point) => (
                 <div key={point} className="flex gap-3">
-                  <Check className={item.tone === "strong" ? "mt-1 size-4 shrink-0 text-[#d97757]" : "mt-1 size-4 shrink-0 text-[#788c5d]"} />
-                  <p className={item.tone === "strong" ? "leading-7 text-[#d8d4c9]" : "leading-7 text-[#343430]"}>{point}</p>
+                  <Check className="mt-1 size-4 shrink-0 text-[#788c5d]" />
+                  <p className="leading-7 text-[#343430]">{point}</p>
                 </div>
               ))}
             </div>
-          </article>
-        ))}
+          </div>
+          <PromptPreviewPanel />
+        </article>
+
+        <article className="flex flex-col bg-[#141413] p-6 text-[#faf9f5]">
+          <div className="flex-1">
+            <p className="font-mono text-sm font-black text-[#d97757]">Harness engineering</p>
+            <div className="mt-8 grid gap-4 md:grid-cols-2">
+              {engineeringCompare[1].points.map((point) => (
+                <div key={point} className="flex gap-3">
+                  <Check className="mt-1 size-4 shrink-0 text-[#d97757]" />
+                  <p className="leading-7 text-[#d8d4c9]">{point}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <HarnessPreviewPanel />
+        </article>
       </div>
 
       <div className="mt-10 grid gap-px border border-white/24 bg-white/24 md:grid-cols-4">
